@@ -49,6 +49,8 @@ class BasicsSpec extends AnyFlatSpec with ScalaCheckDrivenPropertyChecks {
     forAll { n: Byte =>
       power(3)(n.toInt) shouldEqual Math.pow(n.toDouble, 3)
     }
+
+    fiveSquare shouldEqual(25)
   }
 
   "allOptionBooleans" should "be correct" in {
